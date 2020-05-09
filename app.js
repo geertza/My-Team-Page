@@ -10,8 +10,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 
 let teamManager=[]
-tempEngineerTemplate=[]
-tempInternTemplate=[]
+EngTemplate=[]
+InternTemplate=[]
 function initialQuestions(){
     const tempManager = new Manager;
     inquirer
@@ -46,8 +46,7 @@ function mainQuestionStr(){
     inquirer
         .prompt(tempEngineer.questions)
         .then(answers => {
-           tempEngineerTemplate =answers;
-           console.log(tempEngineerTemplate); 
+           EngTemplate =answers;
            mainQuestionStr()
            });
               break;
@@ -56,8 +55,8 @@ function mainQuestionStr(){
                 inquirer
                     .prompt(tempIntern.questions)
                     .then(answers => {
-                       tempInternTemplate =answers;
-                       console.log(tempInternTemplate) 
+                       InternTemplate =answers;
+                        
                        mainQuestionStr()
                        });
               break;
