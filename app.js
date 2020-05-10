@@ -4,21 +4,24 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
-
+intern = require("./templates/internTemplate")
+mainBody = require ("./templates/mainTemplate")
+css = require ("./templates/cssTemplate")
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 
-let teamManager=[]
-EngTemplate=[]
-InternTemplate=[]
+layout=[]
 function initialQuestions(){
     const tempManager = new Manager;
     inquirer
         .prompt(tempManager.questions)
         .then(answers => {
-           teamManager =answers
-            mainQuestionStr()
+         const {name, id, email, officeNumber} = answers
+        layout= mainBody.mainBody(name, id, email, officeNumber);
+            
+        // mainQuestionStr()
+        writeFile()
            });}
 initialQuestions();
 
@@ -46,7 +49,7 @@ function mainQuestionStr(){
     inquirer
         .prompt(tempEngineer.questions)
         .then(answers => {
-           EngTemplate =answers;
+           EngTemplate.push(answers);
            mainQuestionStr()
            });
               break;
@@ -63,3 +66,13 @@ function mainQuestionStr(){
             case "Done":
               return
     }}
+
+
+    function writeFile(){
+    x=css.css();
+    layout += x
+      console.log(layout)
+      fs.writeFile("./output/team.html", layout, function(){
+        console.log("Team file created! Check ./output folder!")
+    })
+    }
