@@ -29,9 +29,11 @@ background-color: pink;
 }
 
 .grid-container > div{
-width: 45vw;
+width: 40vw;
 border: 1px solid black;
 text-align: center;
+border-width:25px ;
+
 }
 
 .grid {
@@ -40,6 +42,9 @@ grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(auto, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 10px;
+position: relative;
+left: 20px;
+border-radius: 10px;
 }
 body{
 background-color: cornflowerblue;

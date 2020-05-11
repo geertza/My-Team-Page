@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12  mb-3 team-heading">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card employee-card">
+        <div class="manager">
+            <h2 class="card-title">Splinter</h2>
+            <h3 class="card-title"><i class="fas fa-user-tie"></i>Team Lead</h4>
+        </div>
+        <div class="info ">
+            <ul class="list-group ">
+                <li class="list-group-item">ID: sneaky rat</li>
+                <li class="list-group-item">Email: <a href="mailto:{{ email }}">yoshi59@turtles.com</a></li>
+                <li class="list-group-item">Office number: 187</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="grid"><!-- start of engineer -->
+    <div class="grid-container">
+                    <div class="card-header engineer">
+                        <h2 class="card-title">Donatello</h2>
+                        <h3 class="card-title"><i class="fas fa-people-carry"></i>Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: radical nerd</li>
+                            <li class="list-group-item">Email: <a href="mailto:donny@turtles.com">donny@turtles.com</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/trashinventor" target="_blank" rel="noopener noreferrer">trashinventor</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- start of engineer -->
+    <div class="grid-container">
+                    <div class="card-header engineer">
+                        <h2 class="card-title">leonardo</h2>
+                        <h3 class="card-title"><i class="fas fa-people-carry"></i>Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: boringone</li>
+                            <li class="list-group-item">Email: <a href="mailto:selfcentered@turtles.com">selfcentered@turtles.com</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/blueStreak" target="_blank" rel="noopener noreferrer">blueStreak</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- start of intern -->
+ <div class="grid-container">
+ <div class="card-header intern">
+     <h2 class="card-title">Ralphy</h2>
+     <h3 class="card-title"><i class="fas fa-bong"></i>Engineer</h3>
+ </div>
+ <div class="card-body info">
+     <ul class="list-group">
+         <li class="list-group-item">ID: grumpy</li>
+         <li class="list-group-item">Email: <a href="mailto:redpoker@turtles.com">redpoker@turtles.com</a></li>
+         <li class="list-group-item">School:u of attitude</li>
+         </ul>
+ </div>
+</div>
+<!-- start of intern -->
+ <div class="grid-container">
+ <div class="card-header intern">
+     <h2 class="card-title">Michelago</h2>
+     <h3 class="card-title"><i class="fas fa-bong"></i>Engineer</h3>
+ </div>
+ <div class="card-body info">
+     <ul class="list-group">
+         <li class="list-group-item">ID: Micky</li>
+         <li class="list-group-item">Email: <a href="mailto:Cowabunga@turtles.com">Cowabunga@turtles.com</a></li>
+         <li class="list-group-item">School:slack U</li>
+         </ul>
+ </div>
+</div>
+</div>
+        </div>
+    </div>
+</body>
+<style>    
+body{
+    font-size: 1.5vw;
+}
+.manager{
+background-color: black;
+color: red;
+text-align: center;
+}
+.card-body{
+background-color: dimgray;
+height: 25vw;
+}
+.card-header{
+height: 15vw;
+}
+.engineer{
+background-color: dodgerblue;
+
+}
+.intern{
+background-color: pink;
+
+}
+
+.grid-container > div{
+width: 40vw;
+border: 1px solid black;
+text-align: center;
+border-width:25px ;
+
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(auto, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+position: relative;
+left: 20px;
+border-radius: 10px;
+}
+body{
+background-color: cornflowerblue;
+}
+h2,h3{
+font-size: 2.5vw;
+}
+h1{
+font-size: 3.2vw;
+}
+@media only screen and (max-width: 550px) {
+.grid {
+grid-template-columns: repeat(1, 1fr);
+}
+.card-body{
+height: 20vh;
+}
+}
+</style>
+</html>

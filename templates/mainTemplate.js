@@ -26,7 +26,7 @@ function mainBody(name,id,email,officeNumber){
             <h2 class="card-title">${name}</h2>
             <h3 class="card-title"><i class="fas fa-user-tie"></i>Team Lead</h4>
         </div>
-        <div class="card-body ">
+        <div class="info ">
             <ul class="list-group ">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email: <a href="mailto:{{ email }}">${email}</a></li>
