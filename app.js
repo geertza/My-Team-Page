@@ -7,6 +7,7 @@ const fs = require("fs");
 intern = require("./templates/internTemplate")
 mainBody = require ("./templates/mainTemplate")
 css = require ("./templates/cssTemplate")
+eng = require("./templates/engTemplate")
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
@@ -20,8 +21,8 @@ function initialQuestions(){
          const {name, id, email, officeNumber} = answers
         layout= mainBody.mainBody(name, id, email, officeNumber);
             
-        // mainQuestionStr()
-        writeFile()
+        mainQuestionStr()
+        
            });}
 initialQuestions();
 
@@ -49,7 +50,8 @@ function mainQuestionStr(){
     inquirer
         .prompt(tempEngineer.questions)
         .then(answers => {
-           EngTemplate.push(answers);
+          const {name, id, email, github} = answers
+        layout += eng.eng(name, id, email,github);
            mainQuestionStr()
            });
               break;
@@ -58,13 +60,14 @@ function mainQuestionStr(){
                 inquirer
                     .prompt(tempIntern.questions)
                     .then(answers => {
-                       InternTemplate =answers;
+                      const {name, id, email, school} = answers
+                      layout += intern.intern(name, id, email,school);
                         
                        mainQuestionStr()
                        });
               break;
             case "Done":
-              return
+              writeFile()
     }}
 
 

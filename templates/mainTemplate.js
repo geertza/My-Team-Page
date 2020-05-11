@@ -9,7 +9,7 @@ function mainBody(name,id,email,officeNumber){
     <title>My Team</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 
@@ -24,7 +24,7 @@ function mainBody(name,id,email,officeNumber){
     <div class="card employee-card">
         <div class="manager">
             <h2 class="card-title">${name}</h2>
-            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Team Lead</h4>
+            <h3 class="card-title"><i class="fas fa-user-tie"></i>Team Lead</h4>
         </div>
         <div class="card-body ">
             <ul class="list-group ">
@@ -36,8 +36,8 @@ function mainBody(name,id,email,officeNumber){
     </div>
     
     <div class="container">
-        <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">`}
+        <div class="content">
+            <div class="grid">`}
                
                
       
